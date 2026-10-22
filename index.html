@@ -23,7 +23,7 @@ let clienteAdmin = null;
 let modoAdmin = false;
 function statusAdmin(msg){document.getElementById('msgAdmin').textContent=msg;}
 function configurarCliente(){
-  if(SUPABASE_PUBLIC_KEY==='sb_publishable_auC2ge_OrlB6uAf3G85SJg_IoP_jjGu'){
+  if(!SUPABASE_PUBLIC_KEY || SUPABASE_PUBLIC_KEY==='COLE_A_CHAVE_PUBLICA_AQUI'){
     statusAdmin('Falta configurar a chave publicavel do Supabase neste arquivo.');return false;
   }
   if(!window.supabase){statusAdmin('Nao foi possivel carregar a biblioteca do Supabase.');return false;}
